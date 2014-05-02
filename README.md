@@ -1,4 +1,4 @@
 shukatsu
 ========
 
-Application for tracking and managing job pursuit
+Application to manage and track your hunt for a job.
