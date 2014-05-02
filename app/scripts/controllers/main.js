@@ -10,7 +10,8 @@ angular.module('shukatsuApp')
   		zoom: 8,
   		options: {
   			streetViewControl: false,
-  			panControl: false
+  			panControl: false,
+  			mapTypeControl: false
   		}
   	};
   });
