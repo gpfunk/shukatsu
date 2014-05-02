@@ -4,7 +4,8 @@ angular
   .module('shukatsuApp', [
     'ngCookies',
     'ngResource',
-    'ngRoute'
+    'ngRoute',
+    'google-maps'
   ])
   .config(function ($routeProvider) {
     $routeProvider
