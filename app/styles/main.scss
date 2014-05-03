@@ -7,44 +7,99 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 // endbower
 
 .browsehappy {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+margin: 0.2em 0;
+background: #ccc;
+color: #000;
+padding: 0.2em 0;
 }
 
 html, body {
-    height: 100%;
-    width: 100%;
-    padding: 0;
-    margin: 0;
+height: 100%;
+width: 100%;
+padding: 0;
+margin: 0;
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
 
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    .footer {
-        padding-left: 0;
-        padding-right: 0;
-    }
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 30px;
-    }
+/* Remove the padding we set earlier */
+.header,
+.marketing,
+.footer {
+padding-left: 0;
+padding-right: 0;
+}
+/* Space out the masthead */
+.header {
+margin-bottom: 30px;
+}
 }
 
 .container {
-    width: 100%;
-    height: 100%;
-    padding: 0px;
-    border: 2px solid black;
+width: 100%;
+height: 100%;
+padding: 0px;
+top:0;
+position:absolute;
 }
 
 .angular-google-map,
 .angular-google-map-container {
-    width: 100%;
+width: 100%;
+height: 100%;
+top: 0;
+position: absolute;
+}
+
+.menu-container {
+  height: 100%;  
+}
+
+.app-menu {
     height: 100%;
- }
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    z-index: 1000;
+    left: 0px;
+}
+
+.app-menu.ng-hide-add,
+.app-menu.ng-hide-remove {
+  -webkit-transition:0.2s linear all;
+  transition:0.2s linear all;
+
+  display:block!important;
+  opacity:1;
+}
+
+.app-menu.ng-hide {
+    display:block!important;
+    left: -240px;
+}
+
+.app-menu-button {
+height: 50px;
+width: 50px;
+z-index: 1000;
+background-color: rgba(0, 255, 255, 0.7);
+position:relative;
+margin-left: 20px;
+margin-top: 20px;
+}
+
+.cursor-hand {
+cursor: pointer;
+cursor: hand;
+}
+
+.city-form {
+  width: 100%;
+  text-align: center;
+}
+
+.toggle-menu-button {
+  height: 20px;
+  width: 100%;
+}

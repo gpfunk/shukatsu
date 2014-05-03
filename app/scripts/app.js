@@ -3,6 +3,7 @@
 angular
   .module('shukatsuApp', [
     'ngCookies',
+    'ngAnimate',
     'ngResource',
     'ngRoute',
     'google-maps'
