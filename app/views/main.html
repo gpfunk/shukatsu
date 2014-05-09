@@ -1,10 +1,5 @@
-<!-- <div ng-init="isHidden=false">
-  <div class="app-menu" ng-hide="isHidden"></div>
-  <div class="app-menu-button cursor-hand" ng-click="isHidden=!isHidden"></div>
-</div> -->
 <div class="menu-container" ng-init="isHidden=false">
-  <div class="app-menu cursor-hand" ng-hide="isHidden">
-    <div class="toggle-menu-button" ng-click="isHidden=!isHidden" ></div>
+  <div class="app-menu" ng-hide="isHidden">
     <div class="city-form">
       <p>Shukatsu</p>
       <form>
@@ -13,13 +8,9 @@
       </form>
     </div>
   </div>
+  <span class="fa fa-th-large toggle-menu-button cursor-hand" ng-hide="!isHidden" ng-click="isHidden=!isHidden"></span>
 </div>
-<!-- <div ng-init="isHidden=false">
-  <button class="my-show-hide-animation-button" ng-click="isHidden=!isHidden">Show / Hide Element</button>
-  <div class="my-show-hide-animation" ng-hide="isHidden">
-    I am visible!
-  </div>
-</div> -->
+
 <google-map center="map.center" draggable="true" options="map.options" zoom="map.zoom">
   <markers models="map.markers" coords="'self'"></markers>
 </google-map>

@@ -59,7 +59,7 @@ position: absolute;
 .app-menu {
     height: 100%;
     width: 280px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(35, 35, 35, 0.9);
     position: relative;
     z-index: 1000;
     left: 0px;
@@ -67,8 +67,8 @@ position: absolute;
 
 .app-menu.ng-hide-add,
 .app-menu.ng-hide-remove {
-  -webkit-transition:0.2s linear all;
-  transition:0.2s linear all;
+  -webkit-transition: all 0.4s cubic-bezier(.02, .01, .47, 1);
+  transition: all 0.4s cubic-bezier(.02, .01, .47, 1);
 
   display:block!important;
   opacity:1;
@@ -76,17 +76,32 @@ position: absolute;
 
 .app-menu.ng-hide {
     display:block!important;
-    left: -240px;
+    left: -280px;
 }
 
-.app-menu-button {
-height: 50px;
-width: 50px;
-z-index: 1000;
-background-color: rgba(0, 255, 255, 0.7);
-position:relative;
-margin-left: 20px;
-margin-top: 20px;
+.toggle-menu-button {
+  font-size: 3em;
+  z-index: 1000;
+  color: #16A085;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.toggle-menu-button.ng-hide-add,
+.toggle-menu-button.ng-hide-remove {
+  -webkit-transition: all 0.36s cubic-bezier(.02, .01, .47, 1);
+  transition: all 0.34s cubic-bezier(0, 0.1, .5, 1);
+  transition-delay: 0.06s;
+
+  display:block!important;
+  opacity:1;
+}
+
+.toggle-menu-button.ng-hide {
+    display:block!important;
+    top: 10px;
+    left: 230px;
 }
 
 .cursor-hand {
@@ -99,7 +114,7 @@ cursor: hand;
   text-align: center;
 }
 
-.toggle-menu-button {
-  height: 20px;
+.full-width {
   width: 100%;
+  border: 1px solid white;
 }

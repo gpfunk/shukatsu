@@ -49,15 +49,19 @@ angular.module('shukatsuApp')
 	// 	});
 	// };
 
+})
+.directive('foggy', function() {
+	return {
+		restrict: 'A',
+		link: function(scope, elem) {
+			elem.foggy({
+				blurRadius: 12,
+				opacity: 0.8,
+				cssFilterSupport: true
+			});
+		}
+	};
 });
-// .directive('hide', function() {
-// 	return {
-// 		restrict: 'A',
-// 		link: function(scope, elem) {
-// 			elem.hide();
-// 		}
-// 	};
-// })
 // .directive('toggle', function() {
 // 	return function(scope, element) {
 // 		element.on('click', function() {
