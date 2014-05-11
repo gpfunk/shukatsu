@@ -9,6 +9,8 @@ angular.module('shukatsuApp')
 	// 	new google.maps.Point(0,0),
 	// 	new google.maps.Point(10, 34));
 
+var map_styles = [{"featureType":"water","stylers":[{"visibility":"on"},{"color":"#acbcc9"}]},{"featureType":"landscape","stylers":[{"color":"#f2e5d4"}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#c5c6c6"}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#e4d7c6"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#fbfaf7"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#c5dac6"}]},{"featureType":"administrative","stylers":[{"visibility":"on"},{"lightness":33}]},{"featureType":"road"},{"featureType":"poi.park","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":20}]},{},{"featureType":"road","stylers":[{"lightness":20}]}]
+
 	var markers = [
 			{
 				latitude: 49.25,
@@ -24,12 +26,18 @@ angular.module('shukatsuApp')
 			}
 		];
 
+	$scope.alert = function(marker) {
+		console.log('hey');
+		console.log(marker);
+	}
+
 	$scope.map = {
 		center: {
 			latitude: 49.25,
 			longitude: -123.1
 		},
 		zoom: 10,
+		styles: map_styles,
 		options: {
 			streetViewControl: false,
 			panControl: false,

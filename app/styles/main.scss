@@ -59,7 +59,7 @@ position: absolute;
 .app-menu {
     height: 100%;
     width: 280px;
-    background-color: rgba(35, 35, 35, 0.9);
+    background-color: rgba(236,240,241, 0.4);
     position: relative;
     z-index: 1000;
     left: 0px;
@@ -117,4 +117,35 @@ cursor: hand;
 .full-width {
   width: 100%;
   border: 1px solid white;
+}
+
+.title-text {
+  letter-spacing:2px;
+  color: #16A085;
+  z-index: 1000;
+  position: absolute;
+  top: 0px;
+  left:70px;
+  font-size: 3em;
+  opacity: 1;
+}
+
+.title-text.ng-hide-add {
+  -webkit-transition: all linear 0.1s;
+  transition: all linear 0.1s;
+  display:block!important;
+  opacity:1;
+}
+
+.title-text.ng-hide-remove {
+  -webkit-transition: all linear 0.1s;
+  transition: all linear 0.1s;
+  transition-delay: 0.2s;
+  display:block!important;
+}
+
+.title-text.ng-hide {
+    display:block!important;
+    letter-spacing: -20px;
+    opacity: 0;
 }

@@ -1,17 +1,11 @@
 <div class="menu-container" ng-init="isHidden=false">
   <div class="app-menu" ng-hide="isHidden">
-    <div class="city-form">
-      <p>Shukatsu</p>
-      <form>
-        <input type="text" placeholder="city" /><br><br>
-        <input type="text" placeholder="province" />
-      </form>
-    </div>
   </div>
-  <span class="fa fa-th-large toggle-menu-button cursor-hand" ng-hide="!isHidden" ng-click="isHidden=!isHidden"></span>
+  <span class="fa fa-bars toggle-menu-button cursor-hand" ng-hide="!isHidden" ng-click="isHidden=!isHidden"></span>
+  <span class="title-text" ng-hide="!isHidden">Shukatsu</span>
 </div>
 
-<google-map center="map.center" draggable="true" options="map.options" zoom="map.zoom">
-  <markers models="map.markers" coords="'self'"></markers>
+<google-map center="map.center" draggable="true" styles="map.styles" options="map.options" zoom="map.zoom">
+  <markers models="map.markers" coords="'self'" click="alert($markedModel)"></markers>
 </google-map>
 
